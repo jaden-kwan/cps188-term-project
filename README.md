@@ -44,16 +44,16 @@ Using the columns LandAverageTemperature, LandMaxTemperature and LandMinTemperat
 
 
 ## Important notes about the report and its submission:
-I.  All computations and plots are to be done with C and GNUPlot only.
+**I.**  All computations and plots are to be done with C and GNUPlot only.
 
-II. You are to write a report. Your report must have an introduction about the purpose of the report and its intended audience.
+**II.** You are to write a report. Your report must have an introduction about the purpose of the report and its intended audience.
 
-III. The report must be detailed, well presented and attractive. Don't be afraid to use colours to emphasize parts of the report. Be creative in the use of tables, graphs and images. Points will be awarded to the exactness of the computations, appearance, ease of reading (use font sizes that are easy to read and use adequate line spacing and margins), and the quality of the English language. 
+**III.** The report must be detailed, well presented and attractive. Don't be afraid to use colours to emphasize parts of the report. Be creative in the use of tables, graphs and images. Points will be awarded to the exactness of the computations, appearance, ease of reading (use font sizes that are easy to read and use adequate line spacing and margins), and the quality of the English language. 
 The report consists of the answers provided by each of the program requirements (the actual outputs from the program as cut/paste and screenshots - like you did in the labs - no need to copy/paste the .c code as you will attach those files separately) and one short conclusion paragraph to describe the C and GNUPlot operations that you used to answer the question. 
 Be original! Plagiarism will be dealt with severely to the full extent of TMU academic integrity regulations. The Turnitin system will be used to help the markers in their assessment of originality.
 
-IV. Your report must have a conclusion. In this section, you will  provide some scientific insights on the results and plots you created with C and GNUPlot. Finally, talk about your experience doing this project and how you would do things differently if you had to do this again.
+**IV.** Your report must have a conclusion. In this section, you will  provide some scientific insights on the results and plots you created with C and GNUPlot. Finally, talk about your experience doing this project and how you would do things differently if you had to do this again.
 
-V. Your report must have a cover page that clearly shows your names and section numbers. 
+**V.** Your report must have a cover page that clearly shows your names and section numbers. 
 
-VI. Projects must be submitted on or before the date specified in the D2L dropbox. Late assignments will not be accepted for marking. If you are concerned about getting the assignment in on time, submit it early. Technical excuses will not be accepted.
+**VI.** Projects must be submitted on or before the date specified in the D2L dropbox. Late assignments will not be accepted for marking. If you are concerned about getting the assignment in on time, submit it early. Technical excuses will not be accepted.
