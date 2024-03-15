@@ -35,8 +35,32 @@ int main(){
         //lets you know that you don't have the csv file in the right place
     }
 
-    printf("Welcome to the Term Project Program!");
+    char line[MAX_LENGTH];
+    double LandAverageTemperature[1000]; // Adjust size as needed
+    int ind = 0;
 
+    fgets(line, sizeof(line), file); // Skip the CSV header
+
+    while(fgets(line, sizeof(line), file)) {
+        int i = 0;
+        while(line[i] != ',') i++; // Skip to the first comma
+        i++; // Skip the comma itself
+        if(line[i] != ',') {
+            LandAverageTemperature[ind] = atof(line + i); // If not another comma, convert to double
+        } else {
+            LandAverageTemperature[ind] = -1.0; // Use -1 to denote missing value
+        }
+        ind++;
+    }
+
+    fclose(file);
+
+    // Print the temperatures
+    for(int i = 0; i < ind; i++) {
+        printf("LandAverageTemperature[%d] = %f\n", i, LandAverageTemperature[i]);
+    }
+
+    printf("Welcome to the Term Project Program!");
 
     printf("Question 1");
 
