@@ -1,0 +1,7 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/stevenzhang/Documents/GitHub/cps188-term-project/term_project'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B34, symSize: 0x2F4 }
+  - { offsetInCU: 0x42, offset: 0x42, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B34, symSize: 0x2F4 }
+...
