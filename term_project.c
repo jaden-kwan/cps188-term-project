@@ -23,6 +23,7 @@ per year. Ignore the years 1750-1759. Based on the land average temperature colu
 calculate the average land temperature for the different centuries: 18th century (1760-1799), 
 19th century (1800-1899), 20th century (1900-1999) and 21st century (2000-2015). One average per century.
 */
+/*testtest - Steven */
 
 
 int main(){
