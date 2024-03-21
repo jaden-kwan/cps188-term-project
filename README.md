@@ -1,4 +1,5 @@
-# cps188-term-project
+# CPS188 Term Project
+
 
 ## Introduction:
 This project is conceived as a group project. It is required that the project be worked on in groups of two to four students (no more, no less, no exceptions). Group members can be from different lab sections but must be from the same professor (Dr. Hamelin: sections 01-09; Dr. Woungang: sections 10-13; Dr. Mustafiz: sections 14-17; Dr. Davoudpour: sections 18-22). Each group will appoint a group leader that will submit the project on behalf of the group. Only one submission per group will be permitted so make sure the cover page clearly indicates the members of the group. Recommended cover page: CPS 188 Term Project - Standardized Cover Page
