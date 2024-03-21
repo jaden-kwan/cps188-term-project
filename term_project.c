@@ -32,7 +32,7 @@ int main(){
     if (!file){
         printf("Cannot open file!\n");
         return 1;
-        //lets you know that you don't have the csv file in the right place
+        //lets you know that you don't have the csv file in the right place7
     }
 
     printf("Welcome to the Term Project Program!");
@@ -42,16 +42,16 @@ int main(){
     /* Question 1, Find the land Temperature 
      * average between 1760 - 2015 */
      
-    int count = 0, i =0;
-    char temp[1024];
+    int count = 0, i =0, n;
+    char temp[MAX_LENGTH];
     char *token, *monthlyavg, *year;
-    double currentyearlyavg=0,yearaverage[255], dmonthlyavg ;
+    double currentyearlyavg=0,yearaverage[255], dmonthlyavg, centuryavg[MAX_LENGTH], century ;
 	//takes the first line and puts it into temp
-	fgets(temp,1024,file);
+	fgets(temp,MAX_LENGTH,file);
 	
 	do {
 		// first is useless so go to the second
-		fgets(temp,1024,file);
+		fgets(temp,MAX_LENGTH,file);
 		
 		// split the line at the commas
 		token = strtok(temp,",");
@@ -81,14 +81,45 @@ int main(){
 		
 	}while (!(feof(file)));
 	
-	//print it lol
+	//print it 
 	printf("   Year	 Avg Temp(C*)\n   ----  ----------\n");
 	for (i=0; i <=255; i++)
 		printf("   %d  %lf\n",i+1760,yearaverage[i]);
 		
-    printf("Question 2");
+    printf("\nQuestion 2\n\n");
+    /* Calculate the average land temperature value for every century*/
+    
+    count = 0;
+	n=0;
+	
 
-    printf("Question 3");
+	printf("Century    AverageTemperature\n");
+    for (i = 1760; i <= 1760+256; i++){
+		if  (i % 100 ==0 || i  == 2016){
+			
+	
+			century /= count;
+			centuryavg[n] = century;
+			
+			printf("%d-%d   %lf \n",i-count,i-1,centuryavg[n]);
+
+			
+			n++;
+			count=0;
+			century =0;
+		}
+		century += yearaverage[i-1760] ;
+		count++;
+
+	}
+	
+
+    
+    
+    
+    
+
+    printf("\nQuestion 3\n");
 
     printf("Question 4");
 
