@@ -160,13 +160,39 @@ int main(){
     for (i = 0 ; i < 12 ; i++){
 		printf("%-9s % 6.3lf \n",&months[i][0],monthlyaverage[i]);
 	}
+	
+	
     
     
     
 
-    printf("\nQuestion 4\n");
+    printf("\n\nQuestion 4\n\n");
+    
 
-    printf("Question 5");
+    
+
+    printf("\nQuestion 5\n");
+    
+     double htemperature, ctemperature;
+    int hyear, cyear;
+    
+    htemperature= yearaverage[0]; ctemperature = yearaverage[0];
+    
+	for (i=0; i <=255; i++){
+		if (yearaverage[i] > htemperature){
+			htemperature = yearaverage[i];
+			hyear = i + 1760;
+		}
+		if (yearaverage[i] < ctemperature){
+			ctemperature = yearaverage[i];
+			cyear = i + 1760;
+		}
+    }
+    
+    printf("Hottest Year: %d Hottest Temp %lf\n",hyear, htemperature);
+    printf("Coldest Year: %d Coldest Temp %lf\n",cyear, ctemperature);
+
+    
 
     printf("Question 6");
 
