@@ -81,6 +81,9 @@ int main(){
 		
 	}while (!(feof(file)));
 	
+	
+	fclose(file);
+	
 	//print it 
 	printf("   Year	 Avg Temp(C*)\n   ----  ----------\n");
 	for (i=0; i <=255; i++)
@@ -116,12 +119,88 @@ int main(){
 
     
     
+    file = fopen("GlobalTemperatures.csv", "r");
+	
+    double monthlyaverage[12] ;
+    char months[][MAX_LENGTH]= { {"January"}, {"Febuary"},{"March"},{"April"},{"May"},{"June"},{"July"},{"August"},{"September"},{"October"},{"November"},{"December"}}  ;
+
+    printf("\nQuestion 3\n\n");
+    
+    count = 0;
+    
+    do {
+		// first is useless so go to the second
+		fgets(temp,MAX_LENGTH,file);
+		
+		// split the line at the commas
+		token = strtok(temp,",");
+		monthlyavg = strtok(NULL,",");
+		// split the line at the dashes to get the year
+		year = strtok(token,"-"); 
+		//convert the year to a int and check its alteast 1960
+		if ( atoi(year) >= 1900){
+			/*printf(" %d  %lf %d\n" , atoi(year),atof(monthlyavg),count);*/
+			if (monthlyavg != NULL){
+				if (count == 0){
+					monthlyaverage[0] = monthlyaverage[0] + atof(monthlyavg);
+					count++;
+				}else if (count == 1){
+					monthlyaverage[1] += atof(monthlyavg);
+					count++;
+				}else if (count == 2){
+					monthlyaverage[2] += atof(monthlyavg);
+					count++;
+				}else if (count == 3){
+					monthlyaverage[3] += atof(monthlyavg);
+					count++;
+				}else if (count == 4){
+					monthlyaverage[4] += atof(monthlyavg);
+					count++;
+				}else if (count == 5){
+					monthlyaverage[5] += atof(monthlyavg);
+					count++;
+				}else if (count == 6){
+					monthlyaverage[6] += atof(monthlyavg);
+					count++;
+				}else if (count == 7){
+					monthlyaverage[7] += atof(monthlyavg);
+					count++;
+				}else if (count == 8){
+					monthlyaverage[8] += atof(monthlyavg);
+					count++;
+				}else if (count == 9){
+					monthlyaverage[9] += atof(monthlyavg);
+					count++;
+				}else if (count == 10){
+					monthlyaverage[10] += atof(monthlyavg);
+					count++;
+				}else if (count == 11){
+					monthlyaverage[11] += atof(monthlyavg);
+					count++;
+				}
+			}
+			}
+		if (count == 12){
+			count = 0;
+		}
+	}
+	while (!(feof(file)));
+	
+	fclose(file);
+	
+	for (i = 0 ; i < 12 ; i++){
+		monthlyaverage[i] /= 116;
+	}
+    
+    printf("Month      Avg Temp\n-----      -----\n");
+    for (i = 0 ; i < 12 ; i++){
+		printf("%-9s % 6.3lf \n",&months[i][0],monthlyaverage[i]);
+	}
+    
     
     
 
-    printf("\nQuestion 3\n");
-
-    printf("Question 4");
+    printf("\nQuestion 4\n");
 
     printf("Question 5");
 
