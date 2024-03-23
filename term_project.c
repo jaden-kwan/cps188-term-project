@@ -164,17 +164,55 @@ int main(){
 	
     
     
-    
+   
 
     printf("\n\nQuestion 4\n\n");
     
-
+    
+    file = fopen("GlobalTemperatures.csv", "r");
+    double htemperature = -99, ctemperature = 100;
+    int hyear, cyear,hmonth,cmonth;
+    
+    
+    
+	do {
+		// first is useless so go to the second
+		fgets(temp,MAX_LENGTH,file);
+		
+		// split the line at the commas
+		token = strtok(temp,",");
+		monthlyavg = strtok(NULL,",");
+		// split the line at the dashes to get the year
+		year = strtok(token,"-"); 
+		//convert the year to a int and check its alteast 1960
+		if ( atoi(year) >= 1760){
+			/*printf(" %d  %lf %d\n" , atoi(year),atof(monthlyavg),count);*/
+			if (monthlyavg != NULL){
+					count ++;
+					if (atof(monthlyavg) > htemperature) {
+						htemperature = atof(monthlyavg);
+						hyear = atoi(year);
+						hmonth = count;
+					}
+					if (atof(monthlyavg) < ctemperature) {
+						ctemperature = atof(monthlyavg);
+						cyear = atoi(year);
+						cmonth = count;
+					}
+			}
+			}
+		if (count == 12){
+			count = 0;
+		}
+		}while (!(feof(file)));
+    
+    printf("Hottest Month: %-9s%d  Temperature: %lf\n",&months[hmonth-1][0],hyear, htemperature);
+    printf("Coldest Month: %-9s%d  Temperature: %lf\n",&months[cmonth-1][0],cyear, ctemperature);
     
 
-    printf("\nQuestion 5\n");
+    printf("\nQuestion 5\n\n");
     
-     double htemperature, ctemperature;
-    int hyear, cyear;
+    hyear=0, cyear=0;
     
     htemperature= yearaverage[0]; ctemperature = yearaverage[0];
     
@@ -189,12 +227,12 @@ int main(){
 		}
     }
     
-    printf("Hottest Year: %d Hottest Temp %lf\n",hyear, htemperature);
-    printf("Coldest Year: %d Coldest Temp %lf\n",cyear, ctemperature);
+    printf("Hottest Year: %d Avg Temp: %lf\n",hyear, htemperature);
+    printf("Coldest Year: %d Avg Temp: %lf\n",cyear, ctemperature);
 
     
 
-    printf("Question 6");
+    printf("\nQuestion 6\n");
 
     printf("Question 7");
 
