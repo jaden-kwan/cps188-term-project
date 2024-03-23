@@ -141,50 +141,14 @@ int main(){
 		if ( atoi(year) >= 1900){
 			/*printf(" %d  %lf %d\n" , atoi(year),atof(monthlyavg),count);*/
 			if (monthlyavg != NULL){
-				if (count == 0){
-					monthlyaverage[0] = monthlyaverage[0] + atof(monthlyavg);
+					monthlyaverage[count] = monthlyaverage[count] + atof(monthlyavg);
 					count++;
-				}else if (count == 1){
-					monthlyaverage[1] += atof(monthlyavg);
-					count++;
-				}else if (count == 2){
-					monthlyaverage[2] += atof(monthlyavg);
-					count++;
-				}else if (count == 3){
-					monthlyaverage[3] += atof(monthlyavg);
-					count++;
-				}else if (count == 4){
-					monthlyaverage[4] += atof(monthlyavg);
-					count++;
-				}else if (count == 5){
-					monthlyaverage[5] += atof(monthlyavg);
-					count++;
-				}else if (count == 6){
-					monthlyaverage[6] += atof(monthlyavg);
-					count++;
-				}else if (count == 7){
-					monthlyaverage[7] += atof(monthlyavg);
-					count++;
-				}else if (count == 8){
-					monthlyaverage[8] += atof(monthlyavg);
-					count++;
-				}else if (count == 9){
-					monthlyaverage[9] += atof(monthlyavg);
-					count++;
-				}else if (count == 10){
-					monthlyaverage[10] += atof(monthlyavg);
-					count++;
-				}else if (count == 11){
-					monthlyaverage[11] += atof(monthlyavg);
-					count++;
-				}
 			}
 			}
 		if (count == 12){
 			count = 0;
 		}
-	}
-	while (!(feof(file)));
+	}while (!(feof(file)));
 	
 	fclose(file);
 	
